@@ -10,13 +10,13 @@ This is a simple React Native application showcasing a list of posts. The applic
 4. **Error Handling**: Displays an error message in case of any loading failures.
 5. **Loading Indicator**: Shows an activity indicator while the posts are being fetched.
 
-## Installation:
+## Expo Installation:
 
-1. Ensure you have `react-native`, `react-redux`, and the required dependencies installed.
-2. Clone the repository.
-3. Navigate to the project directory.
-4. Run `npm install` or `yarn` to install the dependencies.
-5. Start the application using `react-native run-android` or `react-native run-ios` depending on your platform.
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Run `npm install` or `yarn` to install the dependencies.
+4. Start the application using `expo start`.
+5. Scan the qr code with the [Expo Go](https://expo.dev/client) app or run it in an android emulator or ios simulator.
 
 ## Usage:
 
@@ -27,20 +27,14 @@ This is a simple React Native application showcasing a list of posts. The applic
 
 ## Dependencies:
 
-- react
+- @reduxjs/toolkit
 - axios
+- expo
+- expo-status-bar
+- react
 - react-native
 - react-redux
-- @reduxjs/toolkit
-
-## Contributing:
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. Ensure to update tests as appropriate.
 
 ## License:
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-## Acknowledgements:
-
-Special thanks to everyone who contributed to this project and the open-source community for providing the necessary tools and libraries.
