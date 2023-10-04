@@ -15,6 +15,7 @@ import {
   Button,
   FlatList,
   ActivityIndicator,
+  StyleSheet,
 } from "react-native";
 
 const PostsList: React.FC = () => {
@@ -59,25 +60,14 @@ const PostsList: React.FC = () => {
   };
 
   return (
-    <View style={{ flex: 1, padding: 16, marginTop: 30 }}>
+    <View style={styles.container}>
       <TextInput
-        style={{
-          borderColor: "gray",
-          borderWidth: 1,
-          marginBottom: 10,
-          padding: 8,
-        }}
+        style={styles.searchInput}
         value={searchQuery}
         onChangeText={handleSearchChange}
         placeholder="Search..."
       />
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-around",
-          marginBottom: 10,
-        }}
-      >
+      <View style={styles.sortContainer}>
         <Button title="Sort by ID" onPress={() => handleSortChange("id")} />
         <Button
           title="Sort by Title"
@@ -99,13 +89,7 @@ const PostsList: React.FC = () => {
           )}
         />
       )}
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-          marginTop: 10,
-        }}
-      >
+      <View style={styles.paginationContainer}>
         {[...Array(totalPages).keys()].map((num) => (
           <Button
             key={num}
@@ -119,3 +103,27 @@ const PostsList: React.FC = () => {
 };
 
 export default PostsList;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 16,
+    marginTop: 30,
+  },
+  searchInput: {
+    borderColor: "gray",
+    borderWidth: 1,
+    marginBottom: 10,
+    padding: 8,
+  },
+  sortContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginBottom: 10,
+  },
+  paginationContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 10,
+  },
+});
