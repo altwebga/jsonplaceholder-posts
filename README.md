@@ -15,7 +15,7 @@ This is a simple React Native application showcasing a list of posts. The applic
 1. Clone the repository.
 2. Navigate to the project directory.
 3. Run `npm install` or `yarn` to install the dependencies.
-4. Start the application using `expo start`.
+4. Start the application using `npm run start` or `yarn start`.
 5. Scan the qr code with the [Expo Go](https://expo.dev/client) app or run it in an android emulator or ios simulator.
 
 ## Usage:
